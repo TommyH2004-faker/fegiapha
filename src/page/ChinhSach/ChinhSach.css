@@ -1,0 +1,29 @@
+.chinhsach-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 15px;
+}
+
+.chinhsach-container h1 {
+  text-align: center;
+  color: #6b1d1d;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.chinhsach-box {
+  background: #faf7f2;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.chinhsach-box h4 {
+  color: #7a1f1f;
+  margin-top: 25px;
+}
+
+.chinhsach-box p,
+.chinhsach-box li {
+  color: #555;
+  line-height: 1.7;
+}
