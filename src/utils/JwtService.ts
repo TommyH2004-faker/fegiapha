@@ -66,7 +66,7 @@ export function getRoleInHoByToken(): number {
    const token = localStorage.getItem('token');
    if (token) {
       const decodedToken = jwtDecode(token) as JwtPayload;
-      return decodedToken.roleInHo ? parseInt(decodedToken.roleInHo, 10) : 1; // Mặc định là ThanhVien (1)
+      return decodedToken.roleInHo ? parseInt(decodedToken.roleInHo, 10) : 0; // Mặc định là ThanhVien (1)
    }
    return 1;
 }
