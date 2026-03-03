@@ -15,6 +15,7 @@ import {
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import SendIcon from '@mui/icons-material/Send';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { endpointBe } from '../../utils/contant';
 
 export default function CreateNotificationPage() {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ export default function CreateNotificationPage() {
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/notification', {
+      const response = await fetch(endpointBe + '/api/notification', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

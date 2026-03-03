@@ -7,6 +7,7 @@ import Avatar from "@mui/material/Avatar";
 import { useAuth } from "../../utils/AuthContext";
 import { getAvatarByToken, getLastNameByToken, getRoleByToken, isToken, logout } from "../../utils/JwtService";
 import { useEffect, useState } from "react";
+import { endpointBe } from "../../utils/contant";
 
 interface Notification {
   id: string;
@@ -35,7 +36,7 @@ function Navbar() {
   const loadNotifications = () => {
     if (!isToken()) return;
 
-    fetch("http://localhost:5000/api/notification/my", {
+    fetch(endpointBe + "/api/notification/my", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
@@ -75,7 +76,7 @@ function Navbar() {
   }
 
   const markAsRead = (id: string) => {
-    fetch(`http://localhost:5000/api/notification/read/${id}`, {
+    fetch(endpointBe + `/api/notification/read/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`

@@ -18,6 +18,7 @@ import {
   FormLabel,
   CircularProgress,
 } from '@mui/material';
+import { endpointBe } from '../../utils/contant';
 
 interface CreateHoDialogProps {
   open: boolean;
@@ -119,7 +120,7 @@ const CreateHoDialog = ({ open, onClose, onSuccess }: CreateHoDialogProps) => {
 
       console.log('Payload:', JSON.stringify(payload, null, 2)); // Debug
 
-      const response = await fetch('http://localhost:5000/api/Ho', {
+      const response = await fetch(endpointBe + '/api/Ho', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
